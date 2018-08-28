@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccunix.icar.employeesmanager.dao.UserCurdDAOIface">
+
+	<cache type="com.ccunix.icar.base.util.RedisCache" />
+
+	<parameterMap type="com.ccunix.icar.employeesmanager.domain.UserInfo"
+		id="userInfo_par"></parameterMap>
+
+	<resultMap type="com.ccunix.icar.employeesmanager.domain.UserInfo"
+		id="userinfo_res"></resultMap>
+
+	<insert id="addUserCurd">
+		insert into
+		usercurd(id,curd_type,curd_user_number,user_id,reason,time)
+		values(seq_usercurd.nextval,#{curd_type},#{curd_user_number},#{user_id},#{reason},sysdate)
+	</insert>
+
+</mapper>

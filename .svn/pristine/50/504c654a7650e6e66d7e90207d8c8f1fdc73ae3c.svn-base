@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<link href="./parkingSpace.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="./ParkingSpaceManager.js"></script>
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">发布管理>>>车位管理</span>
+	</div>
+	
+	<div id="content">
+		<ul>
+			<li><button type="button" class="btn btn-primary" id="query_btn">查看车位信息</button></li>
+			<li><button type="button" class="btn btn-info" id="add_btn">增加车位信息</button></li>
+			<li><button type="button" class="btn btn-danger" id="delete_btn">删除车位信息</button></li>
+		</ul>
+		
+		
+	</div>
+	<div id="new_div">
+	</div>
+	<div id="backdiv"></div>
+</body>
+</html>

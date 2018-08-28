@@ -1,0 +1,7 @@
+.mytitle{
+	color: #fff;
+	display:inline-block;
+	width: 60vw;
+	text-align: right;
+	margin-right: 20vw;
+}

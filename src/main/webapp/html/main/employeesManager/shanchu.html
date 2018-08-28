@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.form-control {
+	width: 50%;
+}
+</style>
+</head>
+<body>
+	<table border="1" class="table table-striped" style="width: 100%">
+		<tr>
+			<td>操作人工号</td>
+			<td><input id="employ_number" onblur="update_validata(this)"
+				onkeyup="this.value=this.value.replace(/\D/g,'')"
+				onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text"
+				size="2" class="form-control"></td>
+		</tr>
+		<tr>
+			<td>备注</td>
+			<td><textarea id="reason" type="text" size="2"
+					class="form-control"></textarea></td>
+		</tr>
+	</table>
+</body>
+</html>

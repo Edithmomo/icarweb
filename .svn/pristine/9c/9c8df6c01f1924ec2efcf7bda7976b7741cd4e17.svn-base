@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="./noticemanager.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<style>
+
+#content{
+	margin-top: 100px;
+	margin-left: 200px;
+	width: 800px;
+	height:500px;
+	background-color: #eee;
+}
+ul li{
+	list-style:none;
+	margin-top: 10px;
+	padding-top: 50px;
+}
+}
+.info_list{
+   padding-top: 10px;
+}
+</style>
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">发布管理>>>删除员工信息</span>
+	</div>
+
+	
+	<div id="content">
+		<ul>
+			<li><font>请输入删除员工工号</font><input type="text" placeholder="请输入删除员工工号"></li>
+			
+			<li><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".modal">下一步</button></li>
+		</ul>
+	
+	</div>
+	<div id="page">
+		
+</div>
+	</div>
+
+	<div id="new_div">
+		 <div class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">删除员工信息</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul class="info_list">
+					<li class="info_list" style="padding-top: 10px;"><font>请输入需要修改的信息：</font></li>
+					<li class="info_list" style="padding-top: 10px;"><font>姓名：张三</font></li>
+					<li class="info_list" style="padding-top: 10px;"><font>联系方式：13884867956</font></li>
+					<li class="info_list" style="padding-top: 10px;"><font>身份证号：522456199512046549</font></li>
+					<li style="padding-top: 10px;"><font>操作人工号</font><input type="text" name="设置收费标准"></li>
+			        <li style="padding: 10px 200px 0 0;"><font>备注:</font></li>
+			        <li style="padding-top: 10px;"><textarea></textarea></li>
+				</ul>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		        <button type="button" class="btn btn-primary">删除</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div>
+	</div>
+	</div>
+	<div id="backdiv"></div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	if(sessionStorage.length != 0){
+		console.log($("#user_Login_info"))
+		$(".nav-header").attr("disabled","disabled");
+	}else{
+		$(".nav-header").removeattr("disabled");
+	}
+})
+</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+					<li class="active"><a href="#"> <i
+							class="glyphicon glyphicon-th-large"></i> 首页
+					</a></li>
+					<li><a href="#systemSetting" class="nav-header collapsed"
+						data-toggle="collapse"> <i class="glyphicon glyphicon-cog"></i>
+							管理员系统 <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+					</a>
+						<ul id="systemSetting" class="nav nav-list collapse secondmenu"
+							style="height: 0px;">
+							<li><a
+								href="../../../html/main/logon/logon.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>登录</a></li>	
+							<li><a href="../../../html/main/employeesManager/main.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>员工管理</a></li>
+							<li><a href="../../../html/main/parkingSpaceManager/chewei.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>车位管理</a></li>
+							<li><a
+								href="../../../html/main/guanlishoufei/moneyStandardManager.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>收费管理</a></li>			
+						</ul></li>
+					<li>
+					
+					<li><a href="#employeeOperation" class="nav-header collapsed"
+						data-toggle="collapse"> <i class="glyphicon glyphicon-cog"></i>
+							员工操作系统 <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+					</a>
+						<ul id="employeeOperation" class="nav nav-list collapse secondmenu"
+							style="height: 0px;">
+							<li><a href="../../../html/main/EmployeeOperation/inputcartmsg.html" target="center"><i
+									class="glyphicon glyphicon-user">录入汽车信息</i></a></li>
+							<li><a
+								href="../../../html/main/EmployeeOperation/geMoney.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>收取费用</a></li>	
+							<li><a
+								href="../../../html/main/EmployeeOperation/baoyue.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>办理包月</a></li>
+							<li><a
+								href="../../../html/main/EmployeeOperation/xufei.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>续费</a></li>		
+						</ul></li>	
+					<li>
+					<li><a href="#reportForms" class="nav-header collapsed"
+						data-toggle="collapse"> <i
+							class="glyphicon glyphicon-calendar"></i> 图表统计 <span
+							class="pull-right glyphicon glyphicon-chevron-down"></a>
+						<ul id="reportForms" class="nav nav-list collapse secondmenu"
+							style="height: 0px;">
+							<li><a
+								href="../../../html/main/reportForms/employeeShowInfo.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>员工基本信息</a></li>
+							<li><a
+								href="../../../html/main/carinfo/carinfo.html"
+								target="center"><i class="glyphicon glyphicon-th-list"></i>车辆信息管理</a></li>
+						</ul></li>
+					<li><a href="#"> <i class="glyphicon glyphicon-fire"></i>
+							关于系统
+					</a></li>
+				</ul>
+			</div>
+			<div class="col-md-10" id="main"></div>
+		</div>
+	</div>
+</body>
+</html>

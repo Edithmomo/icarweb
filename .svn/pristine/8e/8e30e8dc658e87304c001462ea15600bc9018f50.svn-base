@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>录入汽车信息</title>
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script type="text/javascript" src="../../../js/employeeOperation/cart/cart.js"></script>
+<script type="text/javascript" src="../../../js/validate.js"></script>
+<style type="text/css">
+.nihao{
+display: inline-block;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="nav" class="btn-group">
+		<span class="label label-default">员工操作系统>>>录入汽车信息</span>
+	</div>
+	<div id="fun" class="btn-group" data-toggle="buttons-checkbox">
+	    车牌号码：<input id="lurucart" type="text" onblur="isVehicleNumber(this.value)" size="2" class="form-control nihao"  style="width: 30%" placeholder="请输入车牌号......">
+	 <a href="#" id="submit"><button>提交</button></a>
+	</div>
+	<div id="page"></div>
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,16 @@
+用户信息
+create sequence seq_userinfo
+start with 1;
+车位信息修改记录
+create sequence seq_updatecartinfo
+start with 1;
+包月记录表
+create sequence seq_transactions
+start with 1;
+车辆表
+create sequence seq_cart
+start with 1;
+
+使用
+insert into userinfo(user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card)
+values(seq_userinfo.nextval,#{kind_id},#{user_number},#{user_pw},#{user_name},#{user_phone},#{user_card})

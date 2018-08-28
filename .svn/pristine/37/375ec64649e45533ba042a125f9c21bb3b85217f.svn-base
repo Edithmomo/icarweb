@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>账务信息</title>
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<link href="../../../css/employeeShowInfo.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script type="text/javascript" src="./moneyInfo.js"></script>
+</head>
+
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">系统管理>>>财务信息显示</span>
+	</div>
+	<div id="fun" class="btn-group" data-toggle="buttons-checkbox">
+		<button class="btn btn-primary select_btn" id="query_systemuser"
+			style="float: left">查询</button>
+			<div class="select_box">
+				<span class="label_span ">查询方式 </span>
+				<select id="select_way" name="select_way" class="form-control my_select">
+					<option value="0">按天查询</option>
+					<option value="1">按周查询</option>
+					<option value="2">按月查询</option>
+					<option value="2">按年查询</option>
+				</select>
+				<span class="label_span ">查询时间 </span>
+				<input id="querydata"  type="text" size="2" class="form-control my_select"  value="请输入查询日期......">
+			</div>
+	</div>
+	<div id="content">
+		<div id="cartInfo">
+			<h4 class="user_h4">临时车辆总数：150 </h4>
+			<h4 class="user_h4">包月车辆总数：240 </h4>
+			<h4 class="user_h4">总收入：21000.0 </h4>
+			<table border="1" id="noday_table" class="table table-striped" style="width: 100%">
+				<tr>
+					<th>起始时间</th>
+					<th>结束时间</th>
+					<th>临时车辆数</th>
+					<th>临时收入</th>
+					<th>办理包月车辆数</th>
+					<th>包月车辆收入</th>
+					<th>总收入</th>
+				</tr>
+				<tr>
+					<td>2018-07-01 00:00:00</td>
+					<td>2018-07-01 23:59:59</td>
+					<td>50</td>
+					<td>3000.0</td>
+					<td>80</td>
+					<td>4000.0</td>
+					<td>7000.0</td>
+				</tr>
+				<tr>
+					<td>2018-07-01 00:00:00</td>
+					<td>2018-07-01 23:59:59</td>
+					<td>50</td>
+					<td>3000.0</td>
+					<td>80</td>
+					<td>4000.0</td>
+					<td>7000.0</td>
+				</tr>
+				<tr>
+					<td>2018-07-01 00:00:00</td>
+					<td>2018-07-01 23:59:59</td>
+					<td>50</td>
+					<td>3000.0</td>
+					<td>80</td>
+					<td>4000.0</td>
+					<td>7000.0</td>
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	<div id="page"></div>
+
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+</body>
+</html>

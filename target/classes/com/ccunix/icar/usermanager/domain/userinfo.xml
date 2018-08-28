@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccunix.icar.usermanager.dao.UserInfoDAOInface">
+	<cache type="com.ccunix.icar.base.util.RedisCache" />
+
+	<parameterMap type="com.ccunix.icar.usermanager.domain.UserInfo"
+		id="userInfo_parm"></parameterMap>
+
+	<resultMap type="com.ccunix.icar.usermanager.domain.UserInfo"
+		id="userInfo_result"></resultMap>
+
+	<insert id="addUserinfo" parameterMap="userInfo_parm">
+		insert into
+		userinfo(user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card)
+		values(seq_userinfo.nextval,#{kind_id},#{user_number},#{user_pw},#{user_name},#{user_phone},#{user_card})
+	</insert>
+	<select id="queryAllUserInfo" resultMap="userInfo_result">
+		select
+		user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card
+		from userinfo order by user_id asc
+	</select>
+
+
+
+</mapper>

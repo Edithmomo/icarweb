@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="content-type" content="text/html;charset=utf-8>
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="carinfo page">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet"> 
+<link href="../../../css/carinfo.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="./carinfo.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script> 
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">系统管理>>>车辆信息管理</span>
+	</div>
+	<div id="fun" class="btn-group" data-toggle="buttons-checkbox" >
+			<div class="select_box">
+			   <span class="label_span " >查询对象 </span>
+			    <select  id="select_isvip" name="select_isvip" class="form-control my_select" >							
+					<option value="1">包月车辆</option>
+					<option value="0">临时车辆</option>
+				</select>
+				<!-- <span  class="label_span " >查询方式 </span>
+				<select id="select_timeway" name="select_timeway" class="form-control my_select" >
+					<option value="0">按天查询</option>
+					<option value="1">按月查询</option>
+					<option value="2">按年查询</option>
+                </select>
+				<span class="label_span ">查询关键字 </span>
+				<input id="queryinfo_data"  type="text" size="2" class="form-control my_select" placeholder="请输入查询关键字......" > --> 
+				<button class="btn btn-primary select_btn"  id="query_carinfo" >查询</button>
+			</div>
+	</div>
+	<div id="content">
+		<div id="carinfo" >
+		<table id="vipcarinfo_table" border="1" class="table table-striped" style="width: 100%">
+		</table>
+		</div>
+	</div>
+	<div id="page">
+	</div>
+
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+</body>
+
+</html>

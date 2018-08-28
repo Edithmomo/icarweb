@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>员工信息显示</title>
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<link href="../../../css/employeeShowInfo.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script type="text/javascript" src="./employeeShowInfo.js"></script>
+</head>
+
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">系统管理>>>员工信息显示</span>
+	</div>
+	<div id="fun" class="btn-group" data-toggle="buttons-checkbox">
+		<button class="btn btn-primary select_btn" id="query_systemuser"
+			style="">查询所有</button>
+	</div>
+	<div id="content">
+		<table border="1" id="noday_table" class="table table-striped" style="width: 100%">
+			<tr>
+				<th>员工工号</th>
+				<th>员工姓名</th>
+				<th>身份证号</th>
+				<th>电话号码</th>
+			</tr>
+			<tr>
+				<td>0001</td>
+				<td>张三</td>
+				<td>522415798612036655</td>
+				<td>18888888888</td>
+			</tr>
+			<tr>
+				<td>0001</td>
+				<td>张三</td>
+				<td>522415798612036655</td>
+				<td>18888888888</td>
+			</tr>
+			<tr>
+				<td>0001</td>
+				<td>张三</td>
+				<td>522415798612036655</td>
+				<td>18888888888</td>
+			</tr>
+			<tr>
+				<td>0001</td>
+				<td>张三</td>
+				<td>522415798612036655</td>
+				<td>18888888888</td>
+			</tr>
+		</table>
+	</div>
+	<div id="page"></div>
+
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../../../js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../html/admin/main/login.js"></script>
+<script type="text/javascript">
+ $(function(){
+	if(sessionStorage.length != 0){
+		console.log(sessionStorage,'1')
+		console.log($("#user_Login_info"))
+		$("#user_Login_info").html("<span>当前登录用户为：<font size='4'>"+ sessionStorage.user_name +"</font></span>")
+	}else{
+		console.log(sessionStorage,'2')
+	}
+ })
+</script>
+</head>
+<body style="background: #3dba5c;">
+	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/Admin/index.html" id="logo">
+				停车场管理系统
+				</a>
+			</div>
+			<div style="float:right; color: #fff; padding-right: 5%;margin-top: 20px;" id="user_Login_info">
+			    <span>当前未登录，请点击</span>
+				<a class="btn btn-primary" href='../../../html/main/logon/logon.html' target="center" id="temp_login_button">登录</a>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

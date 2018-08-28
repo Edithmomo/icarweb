@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccunix.icar.employeesmanager.dao.UserInfoDAOIface">
+
+	<cache type="com.ccunix.icar.base.util.RedisCache" />
+
+	<parameterMap type="com.ccunix.icar.employeesmanager.domain.UserInfo"
+		id="userInfo_par"></parameterMap>
+	<parameterMap type="com.ccunix.icar.employeesmanager.domain.UserCurd"
+		id="userCurd_par"></parameterMap>
+
+	<resultMap type="com.ccunix.icar.employeesmanager.domain.UserInfo"
+		id="userinfo_res"></resultMap>
+
+	<insert id="addUserInfo" parameterMap="userInfo_par">
+		insert into
+		userinfo(user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card)
+		values(seq_userinfo.nextval,#{kind_id},#{user_number},#{user_pw},#{user_name},#{user_phone},#{user_card})
+	</insert>
+
+	<select id="queryUserInfoByUserNumber" parameterMap="userInfo_par"
+		resultMap="userinfo_res">
+		select
+		user_id,kind_id,
+		user_number,user_pw,user_name,user_phone,user_card,status from
+		userinfo where status=1
+		<if test="user_number != '' and user_number != null">
+			and user_number = #{user_number,jdbcType=VARCHAR}
+		</if>
+		<if test="user_id != '' and user_id != null">
+			and user_id = #{user_id,jdbcType=VARCHAR}
+		</if>
+		<if test="user_name != '' and user_name != null">
+			and user_name like '%${user_name}%'
+		</if>
+	</select>
+
+	<update id="deleteUserInfo" parameterMap="userCurd_par">
+		update userinfo set
+		status = 0 where user_id=#{user_id}
+	</update>
+
+	<update id="updateUserInfo" parameterMap="userCurd_par">
+		update userinfo set
+		kind_id=#{kind_id},user_name=#{user_name},
+		user_phone=#{user_phone},user_card=#{user_card}
+		where
+		user_id=#{user_id}
+	</update>
+
+</mapper>

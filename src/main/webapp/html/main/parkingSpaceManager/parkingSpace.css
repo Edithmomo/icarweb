@@ -1,0 +1,29 @@
+ul li{
+	list-style:none;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+#content ul{
+	padding-top: 80px;
+}
+#page{
+
+}
+.ul01 li{
+	text-align: left;
+	padding-left: 20%;
+}
+.ul01 ul li font{
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 10px;
+}
+#reason{
+	width: 174px;
+}
+#reason_lable{
+	position: relative;
+	top: -20px;
+	margin-right: 5px;
+}

@@ -1,0 +1,28 @@
+body{
+	text-align: left;
+}
+.my_select{
+	width: 10vw;
+	height: 30px;
+	padding: 0 10px;
+	display: inline-block;
+	text-align: left !important;
+}
+#query_day{
+	display: none;
+}
+.label_span{
+	display: inline-block;
+	margin: 0 10px;
+	background: #ececec;
+}
+#noday_table,#day_table,#cartInfo,.disNone{
+	display: none;
+}
+.select_btn{
+   left: 40%;
+}
+.user_h4{
+	display: inline-block;
+	margin-right: 20px;
+}

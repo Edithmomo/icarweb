@@ -1,0 +1,24 @@
+.my_select{
+	width: 20%;
+	height: 30px;
+	padding: 0 10px;
+	display: inline-block;
+}
+.label_span{
+	display: inline-block;
+	margin: 0 10px;
+	background: #ececec;
+}
+.select_box{
+	padding-right: 30%; 
+}
+#noday_table,#day_table,#cartInfo,.disNone{
+	display: none;
+}
+.select_btn{
+   left: 40%;
+}
+.user_h4{
+	display: inline-block;
+	margin-right: 20px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="./noticemanager.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<style>
+
+#content{
+	margin-top: 100px;
+	margin-left: 200px;
+	width: 800px;
+	height:500px;
+	background-color: #eee;
+}
+ul li{
+	list-style:none;
+	margin-top: 10px;
+	padding-top: 50px;
+}
+#page{
+	/*display:none;*/
+}
+</style>
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">发布管理>>>修改员工信息</span>
+	</div>
+	
+	<div id="content">
+		<ul>
+			<li><font>请输入修改员工工号</font><input type="text" name="请输入修改员工工号"></li>
+			
+			<li><button type="button" class="btn btn-info"  data-toggle="modal" data-target=".modal">下一步</button></li>
+		</ul>
+		
+		
+	</div>
+	<div id="page" >
+	
+	</div>
+
+	<div id="new_div">
+		 <div class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">修改员工信息</h4>
+		      </div>
+		      <div class="modal-body">
+		        <ul>
+					<li><font>请输入需要修改的信息：</font></li>
+					<li><font>姓名</font><input type="text" name="姓名"></li>
+					<li><font>联系方式</font><input type="text" name="联系方式"></li>
+					<li><font>身份证号</font><input type="text" name="身份证号"></li>
+					<li><font>操作人工号</font><input type="text" name="设置收费标准"></li>
+					<li><font>备注</font><input type="text" name="设置收费标准"></li>
+				</ul>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		       
+		        <button type="button" class="btn btn-primary">保存修改</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div>
+	</div>
+	<div id="backdiv"></div>
+</body>
+</html>

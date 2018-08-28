@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccunix.icar.moneyInfoManager.dao.MoneyInfoDao">
+	<resultMap type="com.ccunix.icar.employees.domain.Moneyinfo"
+		id="MoneyinfoMap">
+		<id column="ID" property="moneyinfoId" />
+		<result column="MONEY_KIND" property="moneyKind" />
+		<result column="PRICE" property="price" />
+	</resultMap>
+	<select id="queryMoneyInfo" resultMap="MoneyinfoMap">
+		select ID,MONEY_KIND,PRICE
+		from moneyinfo
+	</select>
+
+	<update id="updateMoneyInfoById" parameterType="com.ccunix.icar.employees.domain.Moneyinfo">
+		update moneyinfo
+		<set>
+			<if test="moneyKind!=null">MONEY_KIND=#{moneyKind},</if>
+			<if test="price!= null">PRICE = #{price}</if>
+		</set>
+		where ID= #{moneyinfoId}
+	</update>
+
+</mapper>

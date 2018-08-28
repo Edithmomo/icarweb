@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccunix.icar.employees.dao.VipCartDao">
+	<resultMap type="com.ccunix.icar.employees.domain.VipCart"
+		id="vipCartMap">
+		<id column="CART_NUMBER" property="cartNumber" />
+		<result column="VIP_NAME" property="vipName" />
+		<result column="VIP_PHONE" property="vipPhone" />
+		<result column="START_TIME" property="startTime" />
+		<result column="END_TIME" property="endTime" />
+		<result column="STATUS" property="status" />
+	</resultMap>
+	<select id="queryVipCartByCartId" parameterType="com.ccunix.icar.employees.domain.Cart"
+		resultMap="vipCartMap">
+		select CART_NUMBER,
+		VIP_NAME,
+		VIP_PHONE,
+		START_TIME,
+		END_TIME,
+		STATUS
+		from vipcart
+		where CART_NUMBER=#{cartNumber}
+	</select>
+
+	<insert id="insertVipCart" parameterType="com.ccunix.icar.employees.domain.VipCart">
+		insert into vipcart(CART_NUMBER,
+		VIP_NAME,
+		VIP_PHONE,
+		START_TIME,
+		END_TIME)
+		values
+		(#{cartNumber},#{vipName},#{vipPhone},to_date(#{startTimeStr},'YYYY-MM-DD'),
+		to_date(#{endTimeStr},'YYYY-MM-DD'))
+	</insert>
+
+	<update id="updateVipCart" parameterType="com.ccunix.icar.employees.domain.VipCart">
+		update vipcart
+		<set>
+			<if test="vipName!=null">VIP_NAME=#{vipName},</if>
+			<if test="vipPhone!= null">VIP_PHONE = #{vipPhone},</if>
+			<if test="startTime!= null">START_TIME = #{startTime},</if>
+			<if test="endTime!= null">END_TIME = #{endTime},</if>
+			<if test="status!= null">STATUS = #{status}</if>
+		</set>
+		where CART_NUMBER=#{cartNumber}
+	</update>
+
+
+
+
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ccunix.icar.register.dao.UserLoginRegeditDAO">
+
+	<cache type="com.ccunix.icar.base.util.RedisCache" />
+
+	<parameterMap type="com.ccunix.icar.register.domain.UserInfoVO"
+		id="userInfo_par"></parameterMap>
+
+	<resultMap type="com.ccunix.icar.register.domain.UserInfoVO"
+		id="userinfo_res"></resultMap>
+
+	<select id="doLogin" parameterMap="userInfo_par" resultMap="userinfo_res">
+		select
+		user_id,kind_id,
+		user_number,user_pw,user_name,user_phone,user_card,status from
+		userinfo where status=1 and user_number = #{user_number} and user_pw =
+		#{user_pw} and kind_id = 1
+	</select>
+	<select id="doguanLogin" parameterMap="userInfo_par" resultMap="userinfo_res">
+		select
+		user_id,kind_id,
+		user_number,user_pw,user_name,user_phone,user_card,status from
+		userinfo where status=1 and user_number = #{user_number} and user_pw =
+		#{user_pw} and kind_id = 2
+	</select>
+
+</mapper>

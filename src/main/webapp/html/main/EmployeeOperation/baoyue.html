@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>办理包月</title>
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script type="text/javascript" src="../../../js/employeeOperation/vipcart/vipcart.js"></script>
+<script type="text/javascript" src="../../../js/validate.js"></script>
+
+<style type="text/css">
+.nihao {
+	display: inline-block;
+}
+</style>
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">员工操作系统>>>办理包月</span>
+	</div>
+	<div id="fun" class="btn-group" data-toggle="buttons-checkbox"
+		align="center">
+		<table>
+			<tr>
+				<td>车牌号码：</td>
+				<td width="300px"><input id="chepai" type="text" size="2"
+					class="form-control nihao" style="width: 50%" onblur="isVehicleNumber(this.value)" placeholder="例：吉Axxxxx"></td>
+			</tr>
+			<tr>
+				<td>车主姓名：</td>
+				<td><input id="cartname" type="text" size="2"
+					class="form-control nihao" style="width: 50%" onblur="isVehicleName(this.value)" placeholder="请输入姓名......"></td>
+			</tr>
+			<tr>
+				<td>手机号：</td>
+				<td><input id="phone" type="text" size="2"
+					class="form-control nihao" style="width: 50%" onblur="isphone2(this.value)" placeholder="例：15544446666"></td>
+			</tr>
+			<tr>
+				<td>包月起始时间：</td>
+				<td><input id="starttime" type="text" size="2"
+					class="form-control nihao" style="width: 50%" onblur="check(this.value)" placeholder="2018-08-08" ></td>
+			</tr>
+			<tr>
+				<td>包月结束时间：</td>
+				<td><input id="endtime" type="text" size="2"
+					class="form-control nihao" style="width: 50%" onblur="check(this.value)" placeholder="2018-08-08"></td>
+			</tr>
+            <tr>
+				<td align="right"><button>返回</button></td>
+				<td><button id="submit">提交</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="page"></div>
+
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+
+</body>
+</html>

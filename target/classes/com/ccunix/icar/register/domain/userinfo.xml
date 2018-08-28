@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ccunix.icar.register.dao.Userinfo_dao">
+	<cache type="com.ccunix.icar.base.util.RedisCache" />
+
+	<parameterMap type="com.ccunix.icar.register.domain.Userinfo"
+		id="user_param"></parameterMap>
+	<resultMap type="com.ccunix.icar.register.domain.Userinfo"
+		id="user_result"></resultMap>
+
+	<insert id="addUser" parameterMap="user_param">
+		insert into userinfo
+		(user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card)
+		values(seq_userinfo.nextval,#{kind_id},#{user_number},#{user_pw},#{user_name},#{user_phone},#{user_card})
+
+	</insert>
+	<select id="logonUser" parameterMap="user_param" resultMap="user_result">
+		select
+		user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card
+		from userinfo
+		where user_number=#{user_number} and user_pw=#{user_pw}
+		and status=1
+	</select>
+	<select id="verification" parameterMap="user_param" resultMap="user_result">
+		select
+		user_id,kind_id,user_number,user_pw,user_name,user_phone,user_card,status
+		from userinfo order by user_id asc
+		where user_number=#{user_number} and
+		user_phone =#{user_phone} and status=1
+	</select>
+	<update id="updatePwd" parameterMap="user_param">
+		update userinfo set
+		user_pw=#{user_pw} where user_number=#{user_number}
+
+	</update>
+
+</mapper>
+
+
+ 
+ 
+ 
+ 

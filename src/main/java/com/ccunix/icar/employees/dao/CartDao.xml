@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccunix.icar.employees.dao.CartDao">
+
+	<resultMap type="com.ccunix.icar.employees.domain.Cart" id="cartMap">
+		<id column="ID" property="id" />
+		<result column="CART_NUMBER" property="cartNumber" />
+		<result column="INPUT_TIME" property="inputTime" />
+		<result column="REMOVE_TIME" property="removeTime" />
+		<result column="STATUS" property="status" />
+		<association property="moneyinfo" column="MONEYINFO_ID"
+			javaType="com.ccunix.icar.employees.domain.Moneyinfo">
+			<id column="ID" property="moneyinfoId" />
+			<result column="MONEY_KIND" property="moneyKind" />
+			<result column="PRICE" property="price" />
+		</association>
+	</resultMap>
+	
+	<insert id="insertCart" parameterType="com.ccunix.icar.employees.domain.Cart">
+		insert into
+		cart(id,MONEYINFO_ID,
+		cart_number,
+		input_time,
+		status)
+		values
+		(seq_cart.nextval,#{moneyinfo.moneyinfoId},#{cartNumber},#{inputTime},#{status})
+	</insert>
+
+	<select id="queryCartByCartId" parameterType="com.ccunix.icar.employees.domain.Cart"
+		resultMap="cartMap"> 
+		SELECT c.ID, c.MONEYINFO_ID, c.CART_NUMBER, c.INPUT_TIME,
+		c.REMOVE_TIME, c.STATUS, m.MONEY_KIND, m.PRICE FROM cart c, moneyinfo
+		m WHERE
+		c.MONEYINFO_ID = m.ID AND c.CART_NUMBER = #{cartNumber} AND c.STATUS=0
+	</select>
+
+	<update id="updateCart" parameterType="com.ccunix.icar.employees.domain.Cart">
+		update cart
+		<set>
+			<if test="inputTime!=null">INPUT_TIME=#{inputTime},</if>
+			<if test="removeTime!= null">REMOVE_TIME = #{removeTime},</if>
+			<if test="status!= null">STATUS = #{status},</if>
+			<if test="moneyinfo != null">MONEYINFO_ID = #{moneyinfo.moneyinfoId}</if>
+		</set>
+		where CART_NUMBER=#{cartNumber} and STATUS=0
+	</update>
+	
+	<select id="queryCart" resultMap="cartMap">
+	SELECT ID, MONEYINFO_ID, CART_NUMBER, INPUT_TIME,
+		REMOVE_TIME, STATUS FROM cart
+	</select>
+
+
+
+</mapper>

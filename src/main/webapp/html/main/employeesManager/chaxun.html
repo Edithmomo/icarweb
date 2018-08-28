@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script type="text/javascript" src="./employees.js"></script>
+<style>
+
+#content{
+	margin-top: 100px;
+	margin-left: 200px;
+	width: 800px;
+	height:500px;
+	background-color: #eee;
+}
+ul li{
+	list-style:none;
+	margin-top: 10px;
+	padding-top: 50px;
+	
+}
+.info_list{
+    text-align: left;
+    padding-left: 25%;
+     padding-top: 10px;
+}
+.info_list font{
+    display:inline-block;
+    width: 100px;
+    text-align: right;
+}
+</style>
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">发布管理>>>查询员工信息</span>
+	</div>
+	
+	<div id="content">
+		<ul>
+			<li><font>请输入查询员工工号</font><input type="text" id="query_input" name="请输入查询员工工号"></li>
+			<li><button type="button" id="query_btn" class="btn btn-info" >下一步</button></li>
+		</ul>
+		
+		
+	</div>
+	<div id="page" >
+		
+		
+	</div>
+
+	<div id="new_div">
+		 <div class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">员工信息显示</h4>
+		      </div>
+		      <div class="modal-body" >
+		        <ul id="show_userinfo">
+		        
+				</ul>
+				 </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>	
+		    
+	</div>
+	<div id="backdiv"></div>
+</body>
+</html>

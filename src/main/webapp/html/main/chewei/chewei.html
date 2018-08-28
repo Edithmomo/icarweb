@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="./noticemanager.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<style>
+
+#content{
+	margin-top: 100px;
+	margin-left: 200px;
+	width: 800px;
+	height:500px;
+	background-color: #eee;
+	text-align: center;
+}
+ul li{
+	list-style:none;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+#content ul{
+	padding-top: 80px;
+}
+#page{
+
+}
+.ul01 li{
+	margin-right:120px;
+}
+.ul01 li font{
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+}
+</style>
+
+</head>
+<body>
+	<div id="nav" class="btn-group">
+		<span class="label label-default">发布管理>>>车位管理</span>
+	</div>
+	
+	<div id="content">
+		<ul>
+			<li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">查看车位信息</button></li>
+			<li><button type="button" class="btn btn-info" data-toggle="modal" data-target=".myModal">增加车位信息</button></li>
+			<li><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal01">删除车位信息</button></li>
+		</ul>
+		
+		
+	</div>
+
+	
+	
+	<div id="page" >
+	
+	</div>
+
+	<div id="new_div">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">当前车位信息</h4>
+		      </div>
+		      <div class="modal-body">
+		    
+					<ul>
+						<li><font>车位总数：200</font></li>
+						<li><font>已用车位数：120</font></li>
+						<li><font>剩余车位数：80</font></li>
+					</ul>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+	   </div>
+</div>
+<div id="new_div">
+	   	 <div class="modal fade myModal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">增加车位信息</h4>
+		      </div>
+		      <div class="modal-body">
+   
+								      
+					<ul class= "ul01">
+						<li><font>增加车位数量为</font><input type="text" name="增加车位信息"></li>
+						<li><font>备注</font><input type="text" name="增加车位信息"></li>
+						<li><font>操作人工号</font><input type="text" name="增加车位信息"></li>
+						<li><button type="button" class="btn btn-success">完成</button></li>
+					</ul>
+				 </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		       
+		
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->	
+</div>
+<div id="new_div">
+			 <div class="modal fade myModal01" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">删除车位信息</h4>
+		      </div>
+		      <div class="modal-body">
+   
+								      
+					<ul class="ul01">
+						<li><font>删除车位数量为</font><input type="text" name="删除车位信息"></li>
+						<li><font>备注</font><input type="text" name="删除车位信息"></li>
+						<li><font>操作人工号</font><input type="text" name="增加车位信息"></li>
+						<li><button type="button" class="btn btn-success">完成</button></li>
+					</ul>
+				 </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		       
+		
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->	
+</div>
+
+
+
+	</div>
+	<div id="backdiv"></div>
+</body>
+</html>

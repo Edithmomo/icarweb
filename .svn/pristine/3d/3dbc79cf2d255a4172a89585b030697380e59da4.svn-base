@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> 管理员登录</title>
+<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../css/base.css" rel="stylesheet">
+<script src="../../../js/jquery.js"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../js/base_table.js"></script>
+<script type="text/javascript" src="../../../html/admin/page/page.js"></script>
+<script src="./js/guanlilogon.js"></script>
+
+</head>
+<body>
+<div id="nav" class="btn-group">
+		<span class="label label-default">系统管理>>>管理员登录</span>
+		</div>
+<div id="content">
+		 <div id="div1">
+	 <table   width="100%" height="100%">
+	 <tr>
+	 <td>&nbsp;</td>
+	 <td width="850" align="center" valign="bottom"><h1 ><font color="white">停车场管理系统</font></h1></td>
+	 <td>&nbsp;</td>
+	    </tr>
+	 <tr>
+	 <td>&nbsp;</td>
+	 <td>&nbsp;</td>
+	 <td align="center">管理员登录</td>
+	    </tr>
+	 
+	 </table>
+		 
+		 </div>
+		 <div id="div2">
+		 <table   align="center" width="300px" height="400px">
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td align="right">工号:</td>
+		 <td class="td1"><input type="text"  id="user_num"></td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1" align="right" >密码:</td>
+		 <td class="td1"><input type="password" id="user_pwd"></td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1" align="right"><a href="forgetPassword.html">忘记密码？</a></td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td   class="td1"align="right"><button type="button" style="width:80px;" onclick="">切换权限</button></td>
+		 <td   class="td1"align="center"><button type="button" id="guanlilogon">登录</button></td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		  <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 <tr>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 <td class="td1">&nbsp;</td>
+		 </tr>
+		 </table>
+		 </div>
+		 
+	</div>
+	 
+	<div id="new_div"></div>
+	<div id="backdiv"></div>
+</body>
+</html>

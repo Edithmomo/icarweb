@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: icarweb
+Bundle-SymbolicName: icarweb
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.ccunix.icar.base.controller,
+ com.ccunix.icar.base.dao,
+ com.ccunix.icar.base.domain,
+ com.ccunix.icar.base.service,
+ com.ccunix.icar.base.util
